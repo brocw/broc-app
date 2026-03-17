@@ -1,0 +1,147 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #396cd8;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  font-family: inherit;
+  text-align: center;
+}
+
+.action-card:hover {
+  border-color: #396cd8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-card:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.action-icon {
+  font-size: 2rem;
+}
+
+.action-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.action-desc {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.action-result {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f0f0f0;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  word-break: break-word;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #1a1a2e;
+  }
+
+  .search-bar input {
+    background: #2a2a3e;
+    border-color: #444;
+    color: #f6f6f6;
+  }
+
+  .search-bar input:focus {
+    border-color: #5b8def;
+  }
+
+  .action-card {
+    background: #2a2a3e;
+    border-color: #444;
+  }
+
+  .action-card:hover {
+    border-color: #5b8def;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .action-desc {
+    color: #aaa;
+  }
+
+  .action-result {
+    background: #333;
+  }
+}
