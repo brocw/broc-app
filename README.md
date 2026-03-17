@@ -1,7 +1,16 @@
-# Tauri + SvelteKit + TypeScript
+# broc-app
 
-This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
+A personalized, cross-platform (Windows and Linux) desktop app.
 
-## Recommended IDE Setup
+## Compiling, Running
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+- `npm run tauri dev` — run the full app (frontend + Rust backend) in development mode
+- `npm run tauri build` — produce a distributable binary
+- `npm run build` — build frontend only (Vite/SvelteKit static output to `build/`)
+- `npm run check` — run svelte-check for type checking
+- `cargo check` — check Rust compilation (run from `src-tauri/`)
+
+## Adding new Actions
+
+- Add .rs file in src-tauri/src/actions/, export in mod.rs, register in lib.rs generate_handler![]
+- Add .ts file in src/lib/actions/ that calls registerAction(), import in index.ts
