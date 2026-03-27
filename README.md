@@ -4,6 +4,10 @@ A personalized, cross-platform (Windows and Linux) desktop app.
 
 ## Compiling, Running
 
+### Compiling
+npm install, have webkit2gtk-4.1 installed.
+
+### Running
 - `npm run tauri dev` — run the full app (frontend + Rust backend) in development mode
 - `npm run tauri build` — produce a distributable binary
 - `npm run build` — build frontend only (Vite/SvelteKit static output to `build/`)
