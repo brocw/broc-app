@@ -321,14 +321,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #f6f6f6;
-    background-color: #1a1a2e;
+    color: #f4f4f5;
+    background-color: #18181b;
   }
 
   .search-bar input {
-    background: #2a2a3e;
-    border-color: #444;
-    color: #f6f6f6;
+    background: #27272a;
+    border-color: #3f3f46;
+    color: #f4f4f5;
   }
 
   .search-bar input:focus {
@@ -336,30 +336,48 @@
   }
 
   .action-card {
-    background: #2a2a3e;
-    border-color: #444;
+    background: #27272a;
+    border-color: #3f3f46;
+    color: #f4f4f5;
   }
 
   .action-card:hover {
     border-color: #5b8def;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .action-name {
+    color: #f4f4f5;
   }
 
   .action-desc {
-    color: #aaa;
+    color: #a1a1aa;
   }
 
   .action-result {
-    background: #333;
+    background: #3f3f46;
+    color: #f4f4f5;
+  }
+
+  .no-results {
+    color: #71717a;
   }
 
   .vault-card {
-    background: #2a2a3e;
-    border-color: #444;
+    background: #27272a;
+    border-color: #3f3f46;
   }
 
   .vault-card.unlocked {
     border-color: #4caf7d;
+  }
+
+  .vault-name {
+    color: #f4f4f5;
+  }
+
+  .vault-status {
+    color: #a1a1aa;
   }
 
   .vault-btn {
@@ -372,26 +390,37 @@
     color: #fff;
   }
 
+  .vault-btn-lock {
+    border-color: #71717a;
+    color: #a1a1aa;
+  }
+
+  .vault-btn-lock:hover {
+    background: #52525b;
+    color: #f4f4f5;
+    border-color: #52525b;
+  }
+
   .modal {
-    background: #2a2a3e;
-    color: #f6f6f6;
+    background: #27272a;
+    color: #f4f4f5;
   }
 
   .modal-subtitle {
-    color: #aaa;
+    color: #a1a1aa;
   }
 
   .modal input,
   .modal textarea {
-    background: #1a1a2e;
-    border-color: #555;
-    color: #f6f6f6;
+    background: #18181b;
+    border-color: #3f3f46;
+    color: #f4f4f5;
   }
 
   .modal input:focus,
   .modal textarea:focus {
     border-color: #5b8def;
-    background: #22223a;
+    background: #1f1f23;
   }
 
   .btn-primary {
@@ -404,11 +433,16 @@
   }
 
   .btn-secondary {
-    color: #bbb;
-    border-color: #555;
+    color: #a1a1aa;
+    border-color: #3f3f46;
   }
 
   .btn-secondary:hover:not(:disabled) {
-    background: #333;
+    background: #3f3f46;
+    color: #f4f4f5;
+  }
+
+  .btn-danger-outline:hover:not(:disabled) {
+    background: #3f1515;
   }
 }
