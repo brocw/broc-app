@@ -111,6 +111,214 @@
   padding: 2rem;
 }
 
+/* Vault card */
+
+.vault-row {
+  margin-bottom: 1rem;
+}
+
+.vault-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  font-family: inherit;
+}
+
+.vault-card.unlocked {
+  border-color: #4caf7d;
+}
+
+.vault-icon {
+  font-size: 1.4rem;
+}
+
+.vault-name {
+  font-weight: 600;
+}
+
+.vault-status {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.vault-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.vault-btn {
+  margin-left: auto;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 1px solid #396cd8;
+  background: transparent;
+  color: #396cd8;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.vault-btn:hover {
+  background: #396cd8;
+  color: #fff;
+}
+
+.vault-btn-lock {
+  border-color: #888;
+  color: #888;
+}
+
+.vault-btn-lock:hover {
+  background: #888;
+  color: #fff;
+}
+
+/* Modals */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.modal-large {
+  max-width: 520px;
+}
+
+.modal h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.modal-subtitle {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background: #fafafa;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: #396cd8;
+  background: #fff;
+}
+
+.modal-error {
+  font-size: 0.85rem;
+  color: #d32f2f;
+}
+
+.modal-confirm-text {
+  font-size: 0.85rem;
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.modal-actions-right {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.btn-danger-outline {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, opacity 0.15s;
+}
+
+.btn-primary {
+  background: #396cd8;
+  color: #fff;
+  border-color: #396cd8;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #2d56b0;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #555;
+  border-color: #ccc;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.btn-danger {
+  background: #d32f2f;
+  color: #fff;
+  border-color: #d32f2f;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #b71c1c;
+}
+
+.btn-danger-outline {
+  background: transparent;
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.btn-danger-outline:hover:not(:disabled) {
+  background: #fdecea;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -142,6 +350,65 @@
   }
 
   .action-result {
+    background: #333;
+  }
+
+  .vault-card {
+    background: #2a2a3e;
+    border-color: #444;
+  }
+
+  .vault-card.unlocked {
+    border-color: #4caf7d;
+  }
+
+  .vault-btn {
+    border-color: #5b8def;
+    color: #5b8def;
+  }
+
+  .vault-btn:hover {
+    background: #5b8def;
+    color: #fff;
+  }
+
+  .modal {
+    background: #2a2a3e;
+    color: #f6f6f6;
+  }
+
+  .modal-subtitle {
+    color: #aaa;
+  }
+
+  .modal input,
+  .modal textarea {
+    background: #1a1a2e;
+    border-color: #555;
+    color: #f6f6f6;
+  }
+
+  .modal input:focus,
+  .modal textarea:focus {
+    border-color: #5b8def;
+    background: #22223a;
+  }
+
+  .btn-primary {
+    background: #5b8def;
+    border-color: #5b8def;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: #3a6fcc;
+  }
+
+  .btn-secondary {
+    color: #bbb;
+    border-color: #555;
+  }
+
+  .btn-secondary:hover:not(:disabled) {
     background: #333;
   }
 }
