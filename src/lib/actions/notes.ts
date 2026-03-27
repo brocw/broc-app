@@ -1,6 +1,7 @@
 import { invoke } from "@tauri-apps/api/core";
 import { registerAction, unregisterAction } from "./registry";
 import type { NoteInfo } from "$lib/notes/store.svelte";
+import { openModal } from "$lib/notes/store.svelte";
 
 export function registerNoteActions(noteList: NoteInfo[]): void {
   for (const note of noteList) {
@@ -13,6 +14,10 @@ export function registerNoteActions(noteList: NoteInfo[]): void {
       execute: async () => {
         const content = await invoke<string>("notes_get_content", { noteId: note.id });
         return content;
+      },
+      secondaryAction: {
+        label: "Edit",
+        execute: () => openModal("editNote", note),
       },
     });
   }

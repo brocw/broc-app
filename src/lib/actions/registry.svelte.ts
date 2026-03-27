@@ -8,6 +8,7 @@ export interface Action {
   icon: string;
   category: string;
   execute: () => Promise<string>;
+  secondaryAction?: { label: string; execute: () => void };
 }
 
 let actionsArray = $state<Action[]>([]);

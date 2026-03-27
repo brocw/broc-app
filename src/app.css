@@ -74,9 +74,27 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.action-card:disabled {
+.action-card.disabled {
   opacity: 0.6;
   cursor: wait;
+}
+
+.action-secondary-btn {
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 1px solid #396cd8;
+  background: transparent;
+  color: #396cd8;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.action-secondary-btn:hover {
+  background: #396cd8;
+  color: #fff;
 }
 
 .action-icon {
@@ -357,6 +375,16 @@
   .action-result {
     background: #3f3f46;
     color: #f4f4f5;
+  }
+
+  .action-secondary-btn {
+    border-color: #5b8def;
+    color: #5b8def;
+  }
+
+  .action-secondary-btn:hover {
+    background: #5b8def;
+    color: #fff;
   }
 
   .no-results {
