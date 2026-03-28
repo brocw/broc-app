@@ -1,5 +1,7 @@
 # broc-app
 
+![A screenshot of the application](./screenshot.png)
+
 A personalized, cross-platform (Windows and Linux) desktop app.
 
 ## Compiling, Running
